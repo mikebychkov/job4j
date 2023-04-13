@@ -1,0 +1,155 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+  <display-name>Archetype Created Web Application</display-name>
+
+
+  <welcome-file-list>
+    <welcome-file>index.do</welcome-file>
+  </welcome-file-list>
+
+
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.dream.filter.AuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+
+  <servlet>
+    <servlet-name>PostServlet</servlet-name>
+    <servlet-class>com.dream.servlet.PostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PostServlet</servlet-name>
+    <url-pattern>/posts.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CandidateServlet</servlet-name>
+    <servlet-class>com.dream.servlet.CandidateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CandidateServlet</servlet-name>
+    <url-pattern>/candidates.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.dream.servlet.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/index.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CandidateEditServlet</servlet-name>
+    <servlet-class>com.dream.servlet.CandidateEditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CandidateEditServlet</servlet-name>
+    <url-pattern>/candidate.edit</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PostEditServlet</servlet-name>
+    <servlet-class>com.dream.servlet.PostEditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PostEditServlet</servlet-name>
+    <url-pattern>/post.edit</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>com.dream.servlet.upload.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>com.dream.servlet.upload.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PhotoUpload</servlet-name>
+    <servlet-class>com.dream.servlet.PhotoUpload2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PhotoUpload</servlet-name>
+    <url-pattern>/photo.upload</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PhotoDownload</servlet-name>
+    <servlet-class>com.dream.servlet.PhotoDownload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PhotoDownload</servlet-name>
+    <url-pattern>/photo.download</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AuthServlet</servlet-name>
+    <servlet-class>com.dream.servlet.AuthServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthServlet</servlet-name>
+    <url-pattern>/auth.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegServlet</servlet-name>
+    <servlet-class>com.dream.servlet.RegServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegServlet</servlet-name>
+    <url-pattern>/reg.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GreetingServlet</servlet-name>
+    <servlet-class>com.dream.servlet.ajax.GreetingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GreetingServlet</servlet-name>
+    <url-pattern>/greet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GreetingServletJSON</servlet-name>
+    <servlet-class>com.dream.servlet.ajax.GreetingServletJSON</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GreetingServletJSON</servlet-name>
+    <url-pattern>/greet.json</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CityList</servlet-name>
+    <servlet-class>com.dream.servlet.CityList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CityList</servlet-name>
+    <url-pattern>/city.list</url-pattern>
+  </servlet-mapping>
+
+</web-app>

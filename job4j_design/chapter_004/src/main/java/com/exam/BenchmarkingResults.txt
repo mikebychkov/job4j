@@ -1,0 +1,4 @@
+Benchmark                                   Mode  Cnt        Score        Error  Units
+BenchmarkingStringConstructor.make2PostUp  thrpt    5  3685121,861 ±  58670,524  ops/s
+BenchmarkingStringConstructor.make3PostUp  thrpt    5  3612521,401 ± 444803,265  ops/s
+BenchmarkingStringConstructor.make6        thrpt    5  4244741,624 ± 403268,438  ops/s
